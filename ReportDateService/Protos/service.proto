@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "ReportDateService";
+
+package reportdateservice;
+
+service ReportDate {
+  rpc GetReportDate (ReportDateRequest) returns (ReportDateResponse);
+}
+
+message ReportDateRequest {
+  int32 dayOfMonth = 1;
+  string date = 2;
+  bool adjust = 3;
+}
+
+message ReportDateResponse {
+  string reportDate = 1;
+}

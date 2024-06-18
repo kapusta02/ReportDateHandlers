@@ -11,7 +11,19 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5"/>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="Google.Protobuf" Version="3.27.1" />
-        <PackageReference Include="Grpc.Tools" Version="2.65.0-pre1" PrivateAssets="All" />
+        <PackageReference Include="Grpc.Tools" Version="2.59.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="Protos\service.proto" GrpcServices="Client" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ReportDateService\ReportDateService.csproj" />
+    </ItemGroup>
+
 
 </Project>
