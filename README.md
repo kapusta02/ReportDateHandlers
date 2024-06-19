@@ -22,7 +22,7 @@ https://localhost:5001
 
 ### API-шлюз
 Для запуска API-шлюза используйте адрес:
-https://localhost:7211
+https://localhost:7211/swagger/index.html
 
 ## Инструкции по запуску
 
